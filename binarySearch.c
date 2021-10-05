@@ -3,7 +3,8 @@ int binarySearch(int A[],int low,int high,int target)
 {
    while(low<=high)
    {
-       int mid=(low+high)/2;
+       int mid=low+(high-low)/2;
+      //This make this program to accept large values as well
        if(A[mid]<target)
        {
            low=mid+1;
