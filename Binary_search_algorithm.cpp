@@ -32,14 +32,15 @@ int search(int a[],int n,int e)
     
     while(f<=l)
     {
-        m=(f+l)/2;
+        m=f+(l-f)/2;
         if(e==a[m])
             return(m);
-        else
+        else{
             if(e>a[m])
                 f=m+1;
             else
                 l=m-1;
+        }
     }
     
     return -1;
